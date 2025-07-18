@@ -1,11 +1,40 @@
 import react from "react";
 import styled from "styled-components";
 import landingvideo from "../images/ColorMeSilly-LandingPage.mp4";
+import gameplayEarly from "../images/gameplay-early-screenshot.png";
+import gameplayLate from "../images/gameplay-late-screenshot.png";
+import hiscores from "../images/hiscores-screenshot.png";
 
 const Landingvideo = styled.video`
   /* pointer-events: none; */
-  width: 100vw;
+  width: 100%;
   height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const MediaContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ScreenshotList = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 20.675rem;
+`;
+
+const ScreenshotImg = styled.img`
+  /* width: calc(1024px / 3 - 0.65rem); */
+  width: 100%;
+  height: auto;
+  margin: 0 0.5rem;
 `;
 
 export default function ColorMeSilly({}) {
@@ -14,6 +43,13 @@ export default function ColorMeSilly({}) {
       <Landingvideo autoPlay muted playsInline loop>
         <source src={landingvideo} type="video/mp4" />
       </Landingvideo>
+      <MediaContainer>
+        <ScreenshotList>
+          <ScreenshotImg src={gameplayEarly} />
+          <ScreenshotImg src={gameplayLate} />
+          <ScreenshotImg src={hiscores} />
+        </ScreenshotList>
+      </MediaContainer>
       <p>
         Color Me Silly is a memory, brain teaser game where you're challenged to push the limits as the game gets harder and new mechanics are
         introduced. Decipher the key to choose the right card, and compete against yourself and others with our self-hosted leaderboards!
