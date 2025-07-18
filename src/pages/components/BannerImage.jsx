@@ -10,12 +10,31 @@ const BannerSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 `;
-export default function BannerImg({ image }) {
+
+const BannerImg = styled.img`
+  border: solid white 3px;
+  border-radius: 1rem;
+
+  box-shadow: 0 0.75rem 0 0 black;
+
+  transition: 0.05s ease-in-out;
+
+  &:hover {
+    transform: scale(1.025, 1.025);
+    box-shadow: 0 1rem 0 0 black;
+  }
+`;
+
+export default function Banner({ image, link }) {
   return (
     <BannerSection>
-      <Link to="/colormesilly">
-        <img src={image} />
+      <Link to={link}>
+        <BannerImg src={image} />
       </Link>
     </BannerSection>
   );

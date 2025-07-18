@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import "./App.css";
 import HeroBanner from "./components/Hero";
-import BannerImg from "./components/BannerImage";
+import Banner from "./components/BannerImage";
 
 import ColormesillyBanner from "../images/itch-banner.gif";
 
 const MainBody = styled.div`
-  background-color: #19161b;
+  /* background-color: #19161b; */
+  background-color: black;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 `;
 
 const AboutSection = styled.div`
@@ -40,7 +40,7 @@ function App() {
         player.
       </AboutSection>
       <BannerSection>
-        <BannerImg image={ColormesillyBanner} />
+        <Banner image={ColormesillyBanner} link={"/ColorMeSilly"} />
       </BannerSection>
     </MainBody>
   );
