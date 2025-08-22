@@ -3,7 +3,6 @@ import { Link } from "react-router";
 import styled from "styled-components";
 
 const BannerSection = styled.div`
-  background-color: #19161b;
   width: 100vw;
   height: 25rem;
 
