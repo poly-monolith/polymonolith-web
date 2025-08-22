@@ -26,6 +26,7 @@ const BannerImg = styled.img`
 
   &:hover {
     transform: scale(1.025, 1.025);
+    border-width: 4px;
     box-shadow: 0 1rem 0 0 black;
   }
 `;
