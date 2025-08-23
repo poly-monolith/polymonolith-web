@@ -7,6 +7,7 @@ import upcaret from "../../images/caret-up-fill.svg";
 
 const NavbarDiv = styled.div`
   position: fixed;
+  z-index: 1000;
   top: 0;
 
   width: 100vw;
@@ -49,6 +50,21 @@ const CaretRotation = keyframes`
   }
 `;
 
+const ButtonShake = keyframes`
+  0%{
+    transform: translateY(0px);
+  }
+  30%{
+    transform: translateY(-3px);
+  }
+  60%{
+    transform: translateY(2px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+`;
+
 const NavLinkLogo = styled(Link)`
   position: absolute;
   left: 2rem;
@@ -66,6 +82,7 @@ const NavLinkLogo = styled(Link)`
 
   &:hover {
     color: #dabce4;
+    animation: ${ButtonShake} 0.2s forwards;
   }
 
   &:hover svg {
@@ -94,6 +111,7 @@ const NavLink = styled(Link)`
 
   &:hover {
     color: #dabce4;
+    animation: ${ButtonShake} 0.2s forwards;
   }
 
   &:hover svg {

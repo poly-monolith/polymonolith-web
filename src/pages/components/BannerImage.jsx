@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const BannerSection = styled.div`
   width: 100vw;
-  height: 25rem;
+  /* height: 25rem; */
 
   display: flex;
   align-items: center;
@@ -15,7 +15,14 @@ const BannerSection = styled.div`
   user-select: none; /* Standard syntax */
 `;
 
+const BannerLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const BannerImg = styled.img`
+  width: 80%;
   border: solid white 3px;
   border-radius: 1rem;
 
@@ -33,9 +40,9 @@ const BannerImg = styled.img`
 export default function Banner({ image, link }) {
   return (
     <BannerSection>
-      <Link to={link}>
+      <BannerLink to={link}>
         <BannerImg src={image} />
-      </Link>
+      </BannerLink>
     </BannerSection>
   );
 }
