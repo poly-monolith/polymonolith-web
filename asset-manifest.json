@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/polymonolith-web/static/css/main.5d513ce3.css",
-    "main.js": "/polymonolith-web/static/js/main.33ada481.js",
-    "static/js/453.df34dc58.chunk.js": "/polymonolith-web/static/js/453.df34dc58.chunk.js",
-    "static/media/ColorMeSilly-LandingPage.mp4": "/polymonolith-web/static/media/ColorMeSilly-LandingPage.7e407c394c79cf846768.mp4",
-    "static/media/itch-banner.gif": "/polymonolith-web/static/media/itch-banner.b5c960debb7114e2fdae.gif",
-    "static/media/gameplay-late-screenshot.png": "/polymonolith-web/static/media/gameplay-late-screenshot.74725188f341d394b33f.png",
-    "static/media/hiscores-screenshot.png": "/polymonolith-web/static/media/hiscores-screenshot.98cfdc947d13a9fd2fee.png",
-    "static/media/gameplay-early-screenshot.png": "/polymonolith-web/static/media/gameplay-early-screenshot.6553f810e21e7c424304.png",
-    "static/media/SIN-NOISE.png": "/polymonolith-web/static/media/SIN-NOISE.2d308b30068237819954.png",
-    "static/media/polymonolith-icon.png": "/polymonolith-web/static/media/polymonolith-icon.eb7af2a5adbaa1141018.png",
-    "index.html": "/polymonolith-web/index.html",
-    "static/media/caret-up-fill.svg": "/polymonolith-web/static/media/caret-up-fill.e9178ccac2bc66d46bc910d21d70113f.svg",
-    "main.5d513ce3.css.map": "/polymonolith-web/static/css/main.5d513ce3.css.map",
-    "main.33ada481.js.map": "/polymonolith-web/static/js/main.33ada481.js.map",
-    "453.df34dc58.chunk.js.map": "/polymonolith-web/static/js/453.df34dc58.chunk.js.map"
+    "main.css": "/static/css/main.5d513ce3.css",
+    "main.js": "/static/js/main.ac483e21.js",
+    "static/js/453.df34dc58.chunk.js": "/static/js/453.df34dc58.chunk.js",
+    "static/media/ColorMeSilly-LandingPage.mp4": "/static/media/ColorMeSilly-LandingPage.7e407c394c79cf846768.mp4",
+    "static/media/itch-banner.gif": "/static/media/itch-banner.b5c960debb7114e2fdae.gif",
+    "static/media/gameplay-late-screenshot.png": "/static/media/gameplay-late-screenshot.74725188f341d394b33f.png",
+    "static/media/hiscores-screenshot.png": "/static/media/hiscores-screenshot.98cfdc947d13a9fd2fee.png",
+    "static/media/gameplay-early-screenshot.png": "/static/media/gameplay-early-screenshot.6553f810e21e7c424304.png",
+    "static/media/SIN-NOISE.png": "/static/media/SIN-NOISE.2d308b30068237819954.png",
+    "static/media/polymonolith-icon.png": "/static/media/polymonolith-icon.eb7af2a5adbaa1141018.png",
+    "index.html": "/index.html",
+    "static/media/caret-up-fill.svg": "/static/media/caret-up-fill.e9178ccac2bc66d46bc910d21d70113f.svg",
+    "main.5d513ce3.css.map": "/static/css/main.5d513ce3.css.map",
+    "main.ac483e21.js.map": "/static/js/main.ac483e21.js.map",
+    "453.df34dc58.chunk.js.map": "/static/js/453.df34dc58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d513ce3.css",
-    "static/js/main.33ada481.js"
+    "static/js/main.ac483e21.js"
   ]
 }
