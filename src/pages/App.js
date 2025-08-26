@@ -1,7 +1,9 @@
 import styled, { keyframes } from "styled-components";
 import "./App.css";
+
 import HeroBanner from "./components/Hero";
 import Banner from "./components/BannerImage";
+import Footer from "./components/footer";
 
 import ColormesillyBanner from "../images/itch-banner.gif";
 import logoBG from "../images/logo-bg.png";
@@ -9,6 +11,8 @@ import logoFront from "../images/logo-front-monolith.png";
 import logoSides from "../images/logo-side-monoliths.png";
 import logoText from "../images/logo-text.png";
 import sinNoise from "../images/SIN-NOISE.png";
+import absentIcon from "../images/no4-icon.png";
+import { useEffect, useRef, useState } from "react";
 
 const MainBody = styled.div`
   /* background-color: #19161b; */
@@ -31,7 +35,7 @@ const AboutSection = styled.div`
   align-self: center;
   color: white;
   font-size: 24px;
-  width: 25%;
+  width: 22.5rem;
   padding: 2rem;
 `;
 const SectionItem = styled.div`
@@ -45,7 +49,7 @@ const BannerSection = styled.div`
   align-items: center;
 `;
 
-const SectionHeader = styled.h2`
+const SectionHeader = styled.h3`
   color: white;
   text-align: center;
 `;
@@ -62,13 +66,105 @@ const EmphasisSpan = styled.span`
     color: #fff180;
     animation: ${ColorRotation} 3s infinite;
   }
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 `;
 
-const Footer = styled.div`
-  color: white;
+const ShowTeam = keyframes`
+  0% {
+    opacity: 0%;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 `;
+
+const SectionTeam = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+
+  opacity: 0%;
+  animation: ${(props) => (props.TeamVisible ? ShowTeam : "")} 1s forwards;
+`;
+
+const TeamContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.05s ease-in-out;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+`;
+
+const SectionTeamIcon = styled.img`
+  width: 9rem;
+  height: 9rem;
+  border: solid white 3px;
+  border-radius: 1rem;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+`;
+
+const TextIcon = styled.div`
+  font-size: 6rem;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+  width: 9rem;
+  height: 9rem;
+
+  border: solid white 3px;
+  border-radius: 1rem;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+`;
+
+const FAQSection = styled.div`
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+
+  flex-direction: column;
+  color: white;
+  font-size: 24px;
+  /* width: 22.5rem; */
+  padding: 0 0 5rem;
+
+  /* width: 40rem; */
+`;
+
+const FAQHead = styled.h3``;
+
+const FAQBody = styled.div``;
 
 function App() {
+  const [TeamVisible, SetTeamVisible] = useState(false);
+  const teamref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => SetTeamVisible(entry.isIntersecting));
+
+    observer.observe(teamref.current);
+  }, []);
+
   const parallaxImgs = [logoBG, logoSides, logoFront, logoText];
 
   return (
@@ -90,11 +186,34 @@ function App() {
         <Banner image={ColormesillyBanner} link={"/ColorMeSilly"} />
       </BannerSection>
       <AboutSection>
-        <SectionHeader>Meet the Team!</SectionHeader>
-        <SectionItem>NOTABSENT</SectionItem>
+        <SectionHeader>Meet the team!</SectionHeader>
+        <SectionItem>
+          <SectionTeam TeamVisible={TeamVisible}>
+            <TeamContent>
+              <SectionTeamIcon src={absentIcon} />
+              <EmphasisSpan>not_absent</EmphasisSpan>
+              Developer & Artist
+            </TeamContent>
+          </SectionTeam>
+        </SectionItem>
+        <SectionItem ref={teamref}>
+          <SectionTeam TeamVisible={TeamVisible}>
+            <TeamContent>
+              <TextIcon>
+                <EmphasisSpan>?</EmphasisSpan>
+              </TextIcon>
+              <EmphasisSpan>more..?</EmphasisSpan>
+            </TeamContent>
+          </SectionTeam>
+        </SectionItem>
       </AboutSection>
 
-      <Footer>Contact us</Footer>
+      <FAQSection>
+        <SectionHeader id="faq">FAQ</SectionHeader>
+        <FAQHead>What tools does our team use?</FAQHead>
+        <FAQBody>Godot, Clip Studio Paint, Aseprite, FL Studio</FAQBody>
+      </FAQSection>
+      <Footer />
     </MainBody>
   );
 }
