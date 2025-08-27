@@ -129,6 +129,10 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
+
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 1rem; */
 `;
 
 const CaretSVG = styled.svg`

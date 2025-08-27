@@ -13,6 +13,7 @@ import logoText from "../images/logo-text.png";
 import sinNoise from "../images/SIN-NOISE.png";
 import absentIcon from "../images/no4-icon.png";
 import { useEffect, useRef, useState } from "react";
+import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from "react-bootstrap";
 
 const MainBody = styled.div`
   /* background-color: #19161b; */
@@ -139,10 +140,10 @@ const TextIcon = styled.div`
 
 const FAQSection = styled.div`
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 
-  flex-direction: column;
   color: white;
   font-size: 24px;
   /* width: 22.5rem; */
@@ -151,9 +152,12 @@ const FAQSection = styled.div`
   /* width: 40rem; */
 `;
 
-const FAQHead = styled.h3``;
+const FAQAccordion = styled(Accordion)`
+  width: 40rem;
+  padding: 1rem;
 
-const FAQBody = styled.div``;
+  background-color: #080808;
+`;
 
 function App() {
   const [TeamVisible, SetTeamVisible] = useState(false);
@@ -210,8 +214,16 @@ function App() {
 
       <FAQSection>
         <SectionHeader id="faq">FAQ</SectionHeader>
-        <FAQHead>What tools does our team use?</FAQHead>
-        <FAQBody>Godot, Clip Studio Paint, Aseprite, FL Studio</FAQBody>
+        <h3>What tools does our team use for our games?</h3>
+        <div>
+          Our team uses a variety of tools covering our needs. Here is a small list of some of them!
+          <ul>
+            <li>Game Engine: Godot</li>
+            <li>Illustrated Assets: Clip Studio Paint</li>
+            <li>Pixel Art Assets: Aseprite</li>
+            <li>Audio & SFX: FL Studio</li>
+          </ul>
+        </div>
       </FAQSection>
       <Footer />
     </MainBody>

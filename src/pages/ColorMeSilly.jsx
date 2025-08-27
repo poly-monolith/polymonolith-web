@@ -1,14 +1,38 @@
 import react from "react";
 import styled from "styled-components";
+
+import Footer from "./components/footer";
+
 import landingvideo from "../images/ColorMeSilly-LandingPage.mp4";
 import gameplayEarly from "../images/gameplay-early-screenshot.png";
 import gameplayLate from "../images/gameplay-late-screenshot.png";
 import hiscores from "../images/hiscores-screenshot.png";
+import sinNoise from "../images/SIN-NOISE.png";
+
+const ColorMeSillyBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-image: url(${sinNoise});
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: center center;
+
+  color: white;
+`;
+
+const VideoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  /* border: solid white 5px; */
+  border-radius: 5px;
+  margin: 2rem 0;
+`;
 
 const Landingvideo = styled.video`
   /* pointer-events: none; */
-  width: 100%;
-  height: 640px;
+  /* width: 100%; */
+  /* height: 640px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +43,8 @@ const MediaContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 1rem 0;
 `;
 
 const ScreenshotList = styled.div`
@@ -27,28 +53,63 @@ const ScreenshotList = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 20.675rem;
+  width: 71.85%;
 `;
 
 const ScreenshotImg = styled.img`
   /* width: calc(1024px / 3 - 0.65rem); */
-  width: 100%;
+  width: 32.3%;
   height: auto;
   margin: 0 0.5rem;
+  border: solid white 2px;
+  border-radius: 5px;
+
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+`;
+
+const YoutubeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 72%;
+`;
+
+const YoutubeFrame = styled.iframe`
+  /* width: 64rem; */
+  /* height: 100%; */
+  margin: 1rem 0;
+
+  aspect-ratio: 16 / 9;
+  width: 100% !important;
 `;
 
 export default function ColorMeSilly({}) {
   return (
-    <div>
-      <Landingvideo autoPlay muted playsInline loop>
-        <source src={landingvideo} type="video/mp4" />
-      </Landingvideo>
+    <ColorMeSillyBody>
+      <VideoContainer>
+        <Landingvideo autoPlay muted playsInline loop infinite>
+          <source src={landingvideo} type="video/mp4" />
+        </Landingvideo>
+      </VideoContainer>
       <MediaContainer>
+        <h3>Screenshots</h3>
         <ScreenshotList>
           <ScreenshotImg src={gameplayEarly} />
           <ScreenshotImg src={gameplayLate} />
           <ScreenshotImg src={hiscores} />
         </ScreenshotList>
+        <YoutubeContainer>
+          <YoutubeFrame
+            src="https://www.youtube.com/embed/yQZ_hSR_w9k?si=GWoYPpOmkx4IS8nm"
+            title="Color Me Silly Youtube Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
+        </YoutubeContainer>
       </MediaContainer>
       <p>
         Color Me Silly is a memory, brain teaser game where you're challenged to push the limits as the game gets harder and new mechanics are
@@ -71,6 +132,7 @@ export default function ColorMeSilly({}) {
         with friends and see who can solve the puzzle first! - Gameplay rewards: cosmetic varieties, custom difficulty scaling & point rewards! -
         Fixing options & settings - Squashing bugs that I'm sure we'll run into together as the game goes live!
       </p>{" "}
-    </div>
+      <Footer />
+    </ColorMeSillyBody>
   );
 }

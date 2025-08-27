@@ -31,7 +31,7 @@ const FooterCol = styled.div`
 `;
 
 const FooterLink = styled(Link)`
-  color: #944bb1;
+  color: white;
   text-decoration: none;
 `;
 
