@@ -7,7 +7,7 @@ import upcaret from "../../images/caret-up-fill.svg";
 
 const NavbarDiv = styled.div`
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   top: 0;
 
   width: 100vw;
