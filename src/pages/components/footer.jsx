@@ -13,6 +13,9 @@ const FooterBody = styled.div`
   justify-content: center;
   align-items: start;
   padding: 1rem 0rem;
+
+  position: relative;
+  bottom: 0;
 `;
 
 const FooterCol = styled.div`

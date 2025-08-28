@@ -1,12 +1,13 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { hydrateRoot } from "react-dom/client";
+import { HashRouter, Routes, Route } from "react-router";
 import styled from "styled-components";
 import "./index.css";
 
 import App from "./pages/App";
 import Navbar from "./pages/components/Navbar";
 import ColorMeSilly from "./pages/ColorMeSilly";
+import FAQ from "./pages/FAQ";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -16,18 +17,37 @@ const NavbarSpacerDiv = styled.div`
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
-    <BrowserRouter>
-      <Navbar />
-      <NavbarSpacerDiv />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/ColorMeSilly" element={<ColorMeSilly />} />
-      </Routes>
-    </BrowserRouter>
-  </>
-);
+const container = document.getElementById("root");
+if (container.hasChildNodes()) {
+  hydrateRoot(
+    container,
+    <>
+      <HashRouter>
+        <Navbar />
+        <NavbarSpacerDiv />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/ColorMeSilly" element={<ColorMeSilly />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+      </HashRouter>
+    </>
+  );
+} else {
+  root.render(
+    <>
+      <HashRouter>
+        <Navbar />
+        <NavbarSpacerDiv />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/ColorMeSilly" element={<ColorMeSilly />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+      </HashRouter>
+    </>
+  );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

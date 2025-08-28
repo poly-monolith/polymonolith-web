@@ -138,27 +138,6 @@ const TextIcon = styled.div`
   user-select: none; /* Standard syntax */
 `;
 
-const FAQSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-  color: white;
-  font-size: 24px;
-  /* width: 22.5rem; */
-  padding: 0 0 5rem;
-
-  /* width: 40rem; */
-`;
-
-const FAQAccordion = styled(Accordion)`
-  width: 40rem;
-  padding: 1rem;
-
-  background-color: #080808;
-`;
-
 function App() {
   const [TeamVisible, SetTeamVisible] = useState(false);
   const teamref = useRef(null);
@@ -212,19 +191,6 @@ function App() {
         </SectionItem>
       </AboutSection>
 
-      <FAQSection>
-        <SectionHeader id="faq">FAQ</SectionHeader>
-        <h3>What tools does our team use for our games?</h3>
-        <div>
-          Our team uses a variety of tools covering our needs. Here is a small list of some of them!
-          <ul>
-            <li>Game Engine: Godot</li>
-            <li>Illustrated Assets: Clip Studio Paint</li>
-            <li>Pixel Art Assets: Aseprite</li>
-            <li>Audio & SFX: FL Studio</li>
-          </ul>
-        </div>
-      </FAQSection>
       <Footer />
     </MainBody>
   );
