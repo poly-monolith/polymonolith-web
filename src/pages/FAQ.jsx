@@ -28,6 +28,9 @@ const FAQSection = styled.div`
   padding: 0 0 5rem;
 
   /* width: 40rem; */
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 const SectionHeader = styled.h3`

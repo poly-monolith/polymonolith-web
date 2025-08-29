@@ -13,7 +13,6 @@ import logoText from "../images/logo-text.png";
 import sinNoise from "../images/SIN-NOISE.png";
 import absentIcon from "../images/no4-icon.png";
 import { useEffect, useRef, useState } from "react";
-import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from "react-bootstrap";
 
 const MainBody = styled.div`
   /* background-color: #19161b; */

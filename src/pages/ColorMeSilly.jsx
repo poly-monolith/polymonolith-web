@@ -32,6 +32,10 @@ const DescriptionSection = styled.div`
   font-size: 24px;
   width: 60%;
   padding: 2rem;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 const SectionItem = styled.div`
@@ -45,11 +49,12 @@ const VideoContainer = styled.div`
   /* border: solid white 5px; */
   border-radius: 5px;
   margin: 2rem 0;
+  width: 100%;
 `;
 
 const Landingvideo = styled.video`
   /* pointer-events: none; */
-  /* width: 100%; */
+  width: 70%;
   /* height: 640px; */
   display: flex;
   justify-content: center;
@@ -147,8 +152,10 @@ export default function ColorMeSilly({}) {
       <DescriptionSection>
         <SectionItem>
           <EmphasisSpan>Color Me Silly</EmphasisSpan>
-          is a memory, brain teaser game where you're challenged to decipher the key to choose the right card. Push the limits of your memory and
-          compete against yourself and others with our online leaderboards!
+          is a memory, brain teaser game where you're challenged to decipher the key to choose the right card.
+          <br />
+          <br />
+          Push the limits of your memory and compete against yourself and others with our online leaderboards!
         </SectionItem>
       </DescriptionSection>
       <MediaContainer>
@@ -209,9 +216,10 @@ export default function ColorMeSilly({}) {
           <EmphasisHeader>Challenge Your Mind!</EmphasisHeader>
           <EmphasisSpan>Confusing to look at, easy to intuit, but hard to master!</EmphasisSpan>
         </SectionItem>
+        <SectionItem>Challenge your mind to solve each round's puzzle as you gradually become fluent in the language of Color Me Silly.</SectionItem>
         <SectionItem>
-          Challenge your mind to solve each round's puzzle as you gradually become fluent in the language of Color Me Silly. Fun for all ages, play
-          Color Me Silly and impress your friends and family with your ability to decipher the code of numbers, colors, and shapes!
+          Fun for all ages, play Color Me Silly and impress your friends and family with your ability to decipher the code of numbers, colors, and
+          shapes!
         </SectionItem>
       </DescriptionSection>
       <VideoContainer>
@@ -251,7 +259,7 @@ export default function ColorMeSilly({}) {
             <li>Fixing options & settings</li>
             <li>Squashing bugs that I'm sure we'll run into together as the game goes live!</li>
             <li>
-              <EmphasisSpan>COLOR ME MATH?</EmphasisSpan>
+              <EmphasisSpan>NUMBER ME SILLY?</EmphasisSpan>
             </li>
           </ul>
         </SectionItem>

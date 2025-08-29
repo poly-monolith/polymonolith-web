@@ -21,15 +21,20 @@ const FooterBody = styled.div`
 const FooterCol = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: start;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
   margin: 0 2rem;
 
   font-weight: bold;
   font-size: 20px;
 
-  width: 10rem;
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+
+  width: 50%;
+  /* width: 10rem; */
   /* height: 10rem; */
 `;
 
@@ -52,6 +57,7 @@ export default function Footer({}) {
         Pages:
         <FooterLink to="/">Home</FooterLink>
         <FooterLink to="/colormesilly">Color Me Silly</FooterLink>
+        <FooterLink to="/faq">FAQ</FooterLink>
       </FooterCol>
     </FooterBody>
   );
