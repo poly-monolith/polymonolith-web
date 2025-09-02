@@ -215,7 +215,7 @@ const Sidebar = styled.div`
   right: 0;
   top: -1rem;
 
-  background-color: #1b1f2c;
+  background-color: rgb(23 24 29);
   width: 51vw;
   height: 99.5vh;
 
@@ -239,7 +239,7 @@ const Hidden = styled.div`
 `;
 
 export default function Navbar() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <NavbarDiv>

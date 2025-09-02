@@ -137,6 +137,16 @@ const EmphasisHeader = styled.h3`
   }
 `;
 
+const CenteredLink = styled.a`
+  display: flex;
+  justify-content: center;
+
+  transition: 0.05s ease-in-out;
+  &:hover {
+    transform: scale(1.2, 1.2);
+  }
+`;
+
 export default function ColorMeSilly({}) {
   const [showScreenshotOne, setShowOne] = useState(false);
   const [showScreenshotTwo, setShowTwo] = useState(false);
@@ -148,6 +158,11 @@ export default function ColorMeSilly({}) {
         <Landingvideo autoPlay muted playsInline loop infinite>
           <source src={landingvideo} type="video/mp4" />
         </Landingvideo>
+      </VideoContainer>
+      <VideoContainer>
+        <CenteredLink href="https://polymonolith.itch.io/color-me-silly" target="_blank">
+          <img src="https://static.itch.io/images/badge-color.svg" width="25%" />
+        </CenteredLink>
       </VideoContainer>
       <DescriptionSection>
         <SectionItem>
