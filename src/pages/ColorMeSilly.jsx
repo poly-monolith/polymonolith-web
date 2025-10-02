@@ -159,12 +159,21 @@ export default function ColorMeSilly({}) {
           <source src={landingvideo} type="video/mp4" />
         </Landingvideo>
       </VideoContainer>
+
       <VideoContainer>
+        {/* STEAM STORE PAGE */}
+        <CenteredLink href="https://polymonolith.itch.io/color-me-silly" target="_blank">
+          <img src="https://static.itch.io/images/badge-color.svg" width="25%" />
+        </CenteredLink>
+        {/* ITCH PAGE */}
         <CenteredLink href="https://polymonolith.itch.io/color-me-silly" target="_blank">
           <img src="https://static.itch.io/images/badge-color.svg" width="25%" />
         </CenteredLink>
       </VideoContainer>
       <DescriptionSection>
+        <YoutubeContainer style={{ alignSelf: "center" }}>
+          <YoutubeFrame src="https://store.steampowered.com/widget/3808430/" frameborder="0" width="1000" height="190"></YoutubeFrame>
+        </YoutubeContainer>
         <SectionItem>
           <EmphasisSpan>Color Me Silly</EmphasisSpan>
           is a memory, brain teaser game where you're challenged to decipher the key to choose the right card.
@@ -195,6 +204,7 @@ export default function ColorMeSilly({}) {
             }}
           />
         </ScreenshotList>
+
         <YoutubeContainer>
           <YoutubeFrame
             src="https://www.youtube.com/embed/yQZ_hSR_w9k?si=GWoYPpOmkx4IS8nm"
@@ -253,8 +263,11 @@ export default function ColorMeSilly({}) {
         </SectionItem>
         <SectionItem>
           Made with love and care by the solo developer, <EmphasisSpan>not_absent</EmphasisSpan>! This game is my first game project release, and with
-          lots of struggles and learning the first demo is live! Special thanks to friends and family! And the amazing Zane Fadul for helping with the
-          trailer!
+          lots of struggles and learning the first demo is live! Special thanks to friends and family! And the amazing{" "}
+          <a href="https://soundcloud.com/zane-fadul" target="_blank">
+            <EmphasisSpan>Zane Fadul</EmphasisSpan>
+          </a>{" "}
+          for helping with the trailer!
         </SectionItem>
       </DescriptionSection>
 
